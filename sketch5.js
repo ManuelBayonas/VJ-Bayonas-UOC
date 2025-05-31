@@ -41,11 +41,9 @@ const speed = 0.02;     // Velocidad de rotación
 y el vídeo generado con IA*/
 function preload() {
     sound = loadSound([
-      '../media/audio/afrohouse.mp3',
-      '../media/audio/afrohouse.ogg',
-      '../media/audio/afrohouse.wav'
+      'media/audio/afrohouse.mp3'
     ]);
-    video = createVideo('../media/video/Paris.mp4');
+    video = createVideo('media/video/Paris.mp4');
     video.size(160, 284);
     video.hide();
   }
