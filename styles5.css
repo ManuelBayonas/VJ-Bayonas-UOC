@@ -1,0 +1,231 @@
+/*Estilos generales*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /*Contenedor principal - uso flex en columna centrada*/
+  /* Contenedor principal que agrupa controles y canvas lado a lado */
+.main-container {
+  display: flex;
+  flex-direction: row; /* lado a lado */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Contenedor de los controles */
+.controls-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ajusta el ancho */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Canvas */
+.canvas-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 100%; /* Asegura que ocupa todo su espacio */
+  min-height: 540px; /* Altura mínima para que el canvas quepa bien */
+}
+
+/* Ajuste general del canvas */
+canvas {
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  border-radius: 10px;
+}
+
+
+  
+  /*Estilos para los botones*/
+  .buttons {
+    width: 150px; /* ancho fijo */
+    padding: 5px 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 auto 5px auto; /* centrado y separación inferior */
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons:hover {
+    background-color: #45a049; /* color un poco más oscuro al pasar el ratón */
+  }
+
+  /*Estilos para los subcontenedores de efectos*/
+  .filter-container, .reverb-container, .noise-container, .compressor-container {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .filter-container h3, .reverb-container h3, .noise-container h3, .compressor-container h3 {
+    margin-top: 5px;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #444;
+    text-align: left;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1em;
+  }
+  
+  #controls {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .control-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+  
+  button, input[type="range"] {
+    width: 100%;
+  }
+  
+  label {
+    text-align: left;
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  #instrucciones{
+    min-width:180px;
+  }
+  /*Ajuste de cambio a negrita cualdo se activa el filtro o rotación correspondiente*/
+  #instrucciones p.active {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1); /* Sombra en la parte superior */
+}
+footer a {
+    color: inherit; /* Usa el mismo color del texto del footer */
+    text-decoration: none; /* Quita el subrayado */
+    font-weight: normal; /* Asegura que no se vuelva negrita */
+}
+
+/* Contenedor del botón de fiesta */
+.party-button-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Fondo de discoteca */
+body.party-mode {
+  background-image: url('../media/images/disco_lights.jpg'); /* o una URL externa */
+  background-size: cover;
+  background-position: center;
+}
+body.party-mode label {
+  font-weight: bold;
+}
+
+/* Contenedores transparentes en party mode */
+body.party-mode .controls-container,
+body.party-mode .canvas-container,
+body.party-mode #instrucciones {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+body.party-mode #instrucciones {
+  min-width:250px !important;
+  padding-left: 10px;
+}
+body.party-mode .buttons {
+  background-color: black;
+  color: white;
+}
+body.party-mode .buttons:hover {
+  background-color: #222;
+}
+body.party-mode h1, body.party-mode h2,
+body.party-mode h3,
+body.party-mode #instrucciones p{
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+}
+
+/* Sliders en modo fiesta (color blanco sobre fondo oscuro) */
+body.party-mode input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #444;
+  border-radius: 3px;
+  outline: none;
+}
+
+body.party-mode input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid #000;
+  box-shadow: 0 0 2px #fff;
+}
+
+body.party-mode input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid #000;
+  box-shadow: 0 0 2px #fff;
+}
+body.party-mode label {
+  color: white;
+  font-weight: bold;
+}
+

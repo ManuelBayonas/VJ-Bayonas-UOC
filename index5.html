@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor de Audio y vídeo con p5.js y p5.sound</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <script src="sketch5.js"></script>
+  <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+  <header>
+    <h1>Reproductor con Efectos Visuales y de Sonido usando p5.js y p5.sound</h1>
+  </header>
+  <div class="main-container">
+    <div id="controls" class="controls-container">
+      <h2>Controles sobre el audio</h2>
+      <!-- Botones y sliders se generan aquí dinámicamente -->
+    </div>
+    <div id="canvas-container" class="canvas-container">
+      <!-- Aquí p5.js pone el canvas para el vídeo-->
+    </div>
+    <div id="instrucciones">
+      <h2>Transformaciones sobre la imagen</h2>
+      <p id="instruccion-1">1: Binarización</p>
+      <p id="instruccion-2">2: Negativo</p>
+      <p id="instruccion-3">3: Erosión</p>
+      <p id="instruccion-4">4: Posterización</p>
+      <p id="instruccion-b">B: Realce de contornos</p>
+      <p id="instruccion-m">M: Rotación horaria</p>
+      <p id="instruccion-n">N: Rotación antihoraria</p>
+      <p id="instruccion-0">0: Cambio de fuente de vídeo</p>
+    </div>
+  </div>
+  <div class="party-button-container">
+    <button id="party-toggle" class="buttons">Party Mode OFF</button>
+  </div>
+  <footer>
+    <p>UOC - 2025 - Manuel Bayonas Martínez | Correo: <a href="mailto:mbayonasm@uoc.edu">mbayonasm@uoc.edu</a> | Proyecto 2 - Media</p>
+  </footer>
+</body>
+</html>
