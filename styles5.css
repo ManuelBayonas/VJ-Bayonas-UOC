@@ -160,7 +160,7 @@ footer a {
 
 /* Fondo de discoteca */
 body.party-mode {
-  background-image: url('../media/images/disco_lights.jpg'); /* o una URL externa */
+  background-image: url('media/images/disco_lights.jpg'); /* o una URL externa */
   background-size: cover;
   background-position: center;
 }
